@@ -38,7 +38,7 @@ const AppProvider = ({ children }) => {
       pageNum -= 1;
     }
 
-    //if do not disable prev/next buttons
+    //if do not hide/disable prev/next buttons
     // if (btn === 'prev') {
     //   pageNum -= 1;
     //   if (pageNum < 0) {
