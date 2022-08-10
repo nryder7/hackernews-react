@@ -15,7 +15,15 @@ const reducer = (state, action) => {
       return { ...state, search: action.payload.search, page: 0 };
     }
     case HANDLE_PAGE: {
-      return { ...state, page: action.payload.page };
+      let pageNum = state.page;
+      if (action.payload.change === 'next') {
+        pageNum += 1;
+      }
+      if (action.payload.change === 'prev') {
+        pageNum -= 1;
+      }
+
+      return { ...state, page: pageNum };
     }
     case SET_STORIES:
       return {

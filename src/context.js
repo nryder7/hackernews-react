@@ -30,31 +30,10 @@ const AppProvider = ({ children }) => {
   };
 
   const handlePage = (btn) => {
-    let pageNum = state.page;
-    if (btn === 'next') {
-      pageNum += 1;
-    }
-    if (btn === 'prev') {
-      pageNum -= 1;
-    }
-
-    //if do not hide/disable prev/next buttons
-    // if (btn === 'prev') {
-    //   pageNum -= 1;
-    //   if (pageNum < 0) {
-    //     pageNum = state.nbPages - 1;
-    //   }
-    // }
-    // if (btn === 'next') {
-    //   pageNum += 1;
-    //   if (pageNum === state.nbPages) {
-    //     pageNum = 0;
-    //   }
-    // }
     dispatch({
       type: HANDLE_PAGE,
       payload: {
-        page: pageNum,
+        change: btn,
       },
     });
   };

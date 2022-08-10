@@ -12,7 +12,7 @@ const Buttons = () => {
         id='prev'
         className='prev-btn'
         onClick={(e) => handlePage(e.target.id)}
-        disabled={page === 0}
+        disabled={isLoading || page === 0}
       >
         prev
       </button>
@@ -21,7 +21,7 @@ const Buttons = () => {
         id='next'
         className='next-btn'
         onClick={(e) => handlePage(e.target.id)}
-        disabled={page === nbPages - 1}
+        disabled={isLoading || page === nbPages - 1}
       >
         next
       </button>
