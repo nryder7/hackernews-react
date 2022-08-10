@@ -7,7 +7,6 @@ const SearchForm = () => {
     <section className='search-form'>
       <h3>search hacker news</h3>
       <form
-        value={search}
         onSubmit={(e) => {
           e.preventDefault();
         }}
@@ -15,6 +14,7 @@ const SearchForm = () => {
         <input
           className='form-input'
           type='text'
+          value={search}
           onChange={(e) => {
             handleForm(e);
           }}
