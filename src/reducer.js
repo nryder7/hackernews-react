@@ -12,7 +12,7 @@ const reducer = (state, action) => {
       return { ...state, isLoading: true };
 
     case HANDLE_SEARCH: {
-      return { ...state, search: action.payload.search };
+      return { ...state, search: action.payload.search, page: 0 };
     }
     case HANDLE_PAGE: {
       return { ...state, page: action.payload.page };
